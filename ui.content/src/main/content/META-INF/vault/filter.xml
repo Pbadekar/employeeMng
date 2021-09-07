@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/studygeeks" mode="merge"/>
+    <filter root="/content/studygeeks" mode="merge"/>
+    <filter root="/content/dam/studygeeks" mode="merge"/>
+    <filter root="/content/experience-fragments/studygeeks" mode="merge"/>
+</workspaceFilter>

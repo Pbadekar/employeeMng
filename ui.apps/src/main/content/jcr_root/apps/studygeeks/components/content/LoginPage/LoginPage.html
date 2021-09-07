@@ -1,0 +1,28 @@
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+
+<sly data-sly-call="${clientlib.all @ categories='aem.login'}"></sly> </sly>
+
+<div class="imgcontainer">
+	<img src="img_avatar2.png" alt="Avatar" class="avatar">
+</div>
+
+<div class="container">
+	<label for="uname"><b>Enter Username</b></label> <input type="text"
+		placeholder="Enter Username" name="uname" id="name" required>
+
+	<label for="psw"><b>Password</b></label> <input type="password"
+		placeholder="Enter Password" name="psw" id="pwd" required>
+	<div class="save">
+		<button type="submit" id="submit" onclick="Logindeatils('Login')">Login</button>
+		<button type="submit" id="Reg" onclick="location.href ='http://localhost:4502/content/employeemng/us/en/RegistPage.html'">Register</button>
+	</div>
+	<label> <input type="checkbox" checked="checked"
+		name="remember"> Remember me
+	</label>
+</div>
+
+<div class="container" style="background-color: #f1f1f1">
+	<button type="button" class="cancelbtn">Cancel</button>
+	<span class="psw">Forgot <a href="#">password?</a></span>
+</div>
