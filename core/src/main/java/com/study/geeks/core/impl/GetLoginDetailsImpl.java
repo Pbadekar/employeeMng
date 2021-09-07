@@ -25,7 +25,7 @@ public class GetLoginDetailsImpl implements GetLoginDetailsService {
 
 	@Override
 	public String VerifyUser(String id, String pass) {
-		String Message = "Incorrect Id or Pass";
+		String Message = "Incorrect Id or Pass1";
 		LOG.debug("id");
 		Map<String, Object> param = new HashMap<String, Object>();
 		ResourceResolver resourceResolver = null;
