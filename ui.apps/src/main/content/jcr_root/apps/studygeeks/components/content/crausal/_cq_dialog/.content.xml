@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <config1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="FeatureItems"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <Field1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Tab name"
+                                name="./TabName"/>
+                        </items>
+                    </config1>
+                    <config2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="product details"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well"
+                                fieldLabel="Product Details">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <multifield
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="ok"
+                                        fieldLabel="product">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./prodcutdetails">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <prodcutname
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Product Name"
+                                                    filedDescription="abc"
+                                                    name="./ProductName"/>
+                                                <price
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Product Price"
+                                                    fieldLabel="Product Price"
+                                                    name="./price"/>
+                                                <imagepath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="ImagPath"
+                                                    fieldLabel="Image address"
+                                                    name="./ImageURL"/>
+                                                <productlink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="ImagPath"
+                                                    fieldLabel="product link"
+                                                    name="./productlink"/>
+                                            </items>
+                                        </field>
+                                    </multifield>
+                                </items>
+                            </well>
+                        </items>
+                    </config2>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

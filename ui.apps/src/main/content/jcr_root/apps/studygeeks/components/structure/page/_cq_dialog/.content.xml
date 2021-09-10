@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Page"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.common.wcm,cq.siteadmin.admin.properties]"
+    mode="edit">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <facebook
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Facebook Open Graph"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <url
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        cq-msm-lockable="ogUrl"
+                                        fieldLabel="URL"
+                                        name="./ogUrl"
+                                        renderReadOnly="{Boolean}true"/>
+                                    <app-id
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        cq-msm-lockable="ogAppId"
+                                        fieldLabel="App Id"
+                                        name="./ogAppId"
+                                        renderReadOnly="{Boolean}true"/>
+                                    <site-name
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        cq-msm-lockable="ogSiteName"
+                                        fieldLabel="Site Name"
+                                        name="./ogSiteName"
+                                        renderReadOnly="{Boolean}true"/>
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        cq-msm-lockable="ogTitle"
+                                        fieldLabel="Page Title"
+                                        name="./ogTitle"
+                                        renderReadOnly="{Boolean}true"/>
+                                    <type
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        cq-msm-lockable="ogType"
+                                        fieldLabel="Type"
+                                        name="./ogType"
+                                        renderReadOnly="{Boolean}true"/>
+                                    <description
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        cq-msm-lockable="ogDescription"
+                                        fieldLabel="Description"
+                                        name="./ogDescription"
+                                        renderReadOnly="{Boolean}true"/>
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        cq-msm-lockable="ogImage"
+                                        fieldLabel="Image path"
+                                        name="./ogImage"
+                                        renderReadOnly="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </facebook>
+                    <pageType
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Type"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <pageId
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/select"
+                                        cq-msm-lockable="pageId"
+                                        emptyText="selection"
+                                        fieldLabel="Select Page"
+                                        name="./pageId">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <manage-user
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Manage User "
+                                                value="manage-user"/>
+                                            <profile
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Profile"
+                                                value="profile"/>
+                                            <billsplitindi
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Bill Split"
+                                                value="billsplitindi"/>
+                                            <selectuser
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select User"
+                                                value="selectuser"/>
+                                            <billsandpayments
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Bills and Payments"
+                                                value="AuthSignSummary"/>
+                                            <edit
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Edit Profile"
+                                                value="edit"/>
+                                            <authsignsummary
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Auth Sign Summary"
+                                                value="AuthSignSummary"/>
+                                            <update-preference
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Update Bill Preference"
+                                                value="update-preference"/>
+                                            <authsign-history-details
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Auth Sign History Details"
+                                                value="AuthSignHistoryDetails"/>
+                                            <bulk-update
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Bulk Update"
+                                                value="bulk_update"/>
+                                            <account-details
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Account-Details"
+                                                value="account-details"/>
+                                            <managegroup
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Manage Group"
+                                                value="managegroup"/>
+                                            <selectUser
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select User"
+                                                value="select-user"/>
+                                            <usergroupcreate
+                                                jcr:primaryType="nt:unstructured"
+                                                text="User Group Create"
+                                                value="user-group-create"/>
+                                            <Service-Act
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Service Activation"
+                                                value="Service-Act"/>
+                                            <selectusersforgrps
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select Users For Groups"
+                                                value="selectusersforgrps"/>
+                                            <userrequest
+                                                jcr:primaryType="nt:unstructured"
+                                                text="User Request"
+                                                value="user-request"/>
+                                            <changeplan
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Change Plan"
+                                                value="changeplan"/>
+                                            <changeplanadduser
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Add User PAge For Change Plan"
+                                                value="adduser-changeplan"/>
+                                            <manageusergroupssingle
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Manage User Group Single"
+                                                value="manageusergroupssingle"/>
+                                            <transfertoioip
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Transfer to IOIP"
+                                                value="transfertoioip"/>
+                                            <deactivation-request
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Deactivation Request"
+                                                value="deactivation-request"/>
+                                            <updatecreditlimit
+                                                jcr:primaryType="nt:unstructured"
+                                                text="update credit limit"
+                                                value="update-credit-limit"/>
+                                            <transfertocomp
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Transfer to New Company"
+                                                value="transfertocomp"/>
+                                            <transferconfirm
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Transfer to IOIP/Company Confirm"
+                                                value="transfertoioipconfirm"/>
+                                            <p2p-idea
+                                                jcr:primaryType="nt:unstructured"
+                                                text="p2p-idea"
+                                                value="p2p-idea"/>
+                                            <p2p-vodafone
+                                                jcr:primaryType="nt:unstructured"
+                                                text="p2p-vodafone"
+                                                value="p2p-vodafone"/>
+                                            <Set-BillSplit-Individual
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Set-BillSplit-Individual"
+                                                value="Set-BillSplit-Individual"/>
+                                            <billcardview
+                                                jcr:primaryType="nt:unstructured"
+                                                text="COCP Bill Split"
+                                                value="billcardview"/>
+                                            <cocp-addressbook
+                                                jcr:primaryType="nt:unstructured"
+                                                text="COCP AddressBook"
+                                                value="cocp-addressbook"/>
+                                            <reloadoffersMu
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Reload Offers MU"
+                                                value="reloadOffMU"/>
+                                            <reloadoffers
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Reload Offers "
+                                                value="reloadoffers"/>
+                                            <reloadoffersNas
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Reload Offers NAS"
+                                                value="reloadOffNAS"/>
+                                            <manageautoapprovals
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Manage Auto Approvals"
+                                                value="manage-auto-approvals"/>
+                                            <autoalertselectuser
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Auto Alert Select User"
+                                                value="auto-alert-select-user"/>
+                                            <manageautoalert
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Manage Auto Alert"
+                                                value="manage-auto-alert"/>
+                                            <siminventory
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Sim inventory"
+                                                value="siminventory"/>
+                                        </items>
+                                    </pageId>
+                                    <redirectPageFlag
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        checked="true"
+                                        fieldDescription="Redirect to profile management page"
+                                        name="./redirectFlag"
+                                        text="Redirect Page Flag"
+                                        uncheckedValue="false"
+                                        value="true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </pageType>
+                    <enablers
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Enablers"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <activateCarouselBanner
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        checked="true"
+                                        fieldDescription="Enable Carousel Banner"
+                                        name="./activateCarouselBanner"
+                                        text="Enable Carousel Banner"
+                                        uncheckedValue="false"
+                                        value="true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </enablers>
+                    <pageModal
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Load Modal"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <enablePageLoadModal
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        checked="true"
+                                        fieldDescription="Redirect to profile management page"
+                                        name="./enablePageLoadModal"
+                                        text="Enable Page Load Modal?"
+                                        uncheckedValue="false"
+                                        value="true"/>
+                                    <heading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldLabel="Heading"
+                                        name="./heading"/>
+                                    <text
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        name="./text"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format
+                                                jcr:primaryType="nt:unstructured"
+                                                features="bold,italic"/>
+                                            <justify
+                                                jcr:primaryType="nt:unstructured"
+                                                features="-"/>
+                                            <links
+                                                jcr:primaryType="nt:unstructured"
+                                                features="modifylink,unlink"/>
+                                            <lists
+                                                jcr:primaryType="nt:unstructured"
+                                                features="*"/>
+                                            <misctools jcr:primaryType="nt:unstructured">
+                                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                                    <chars jcr:primaryType="nt:unstructured">
+                                                        <default_copyright
+                                                            jcr:primaryType="nt:unstructured"
+                                                            entity="&amp;copy;"
+                                                            name="copyright"/>
+                                                        <default_euro
+                                                            jcr:primaryType="nt:unstructured"
+                                                            entity="&amp;euro;"
+                                                            name="euro"/>
+                                                        <default_registered
+                                                            jcr:primaryType="nt:unstructured"
+                                                            entity="&amp;reg;"
+                                                            name="registered"/>
+                                                        <default_trademark
+                                                            jcr:primaryType="nt:unstructured"
+                                                            entity="&amp;trade;"
+                                                            name="trademark"/>
+                                                    </chars>
+                                                </specialCharsConfig>
+                                            </misctools>
+                                            <paraformat
+                                                jcr:primaryType="nt:unstructured"
+                                                features="*">
+                                                <formats jcr:primaryType="nt:unstructured">
+                                                    <default_p
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Paragraph"
+                                                        tag="p"/>
+                                                    <default_h1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Heading 1"
+                                                        tag="h1"/>
+                                                    <default_h2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Heading 2"
+                                                        tag="h2"/>
+                                                    <default_h3
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Heading 3"
+                                                        tag="h3"/>
+                                                    <default_h4
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Heading 4"
+                                                        tag="h4"/>
+                                                    <default_h5
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Heading 5"
+                                                        tag="h5"/>
+                                                    <default_h6
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Heading 6"
+                                                        tag="h6"/>
+                                                    <default_blockquote
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Quote"
+                                                        tag="blockquote"/>
+                                                    <default_pre
+                                                        jcr:primaryType="nt:unstructured"
+                                                        description="Preformatted"
+                                                        tag="pre"/>
+                                                </formats>
+                                            </paraformat>
+                                            <table
+                                                jcr:primaryType="nt:unstructured"
+                                                features="-">
+                                                <hiddenHeaderConfig
+                                                    jcr:primaryType="nt:unstructured"
+                                                    hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                                    hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                            <tracklinks
+                                                jcr:primaryType="nt:unstructured"
+                                                features="*"/>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline
+                                                    jcr:primaryType="nt:unstructured"
+                                                    toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                            ref="justify"/>
+                                                        <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                            ref="lists"/>
+                                                        <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="paraformat:getFormats:paraformat-pulldown"
+                                                            ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                                <dialogFullScreen
+                                                    jcr:primaryType="nt:unstructured"
+                                                    toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            items="paraformat:getFormats:paraformat-pulldown"
+                                                            ref="paraformat"/>
+                                                    </popovers>
+                                                </dialogFullScreen>
+                                                <tableEditOptions
+                                                    jcr:primaryType="nt:unstructured"
+                                                    toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                            </cui>
+                                        </uiSettings>
+                                    </text>
+                                    <pageModalImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Page Modal image"
+                                        fieldLabel="Page Modal image"
+                                        name="./pageModalImage"
+                                        rootPath="/content/dam/vodafonemvp"/>
+                                </items>
+                            </column>
+                        </items>
+                    </pageModal>
+                    <errorPages
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Error Page Configuration"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <handlererror
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldDescription="Enter error page folder path"
+                                        fieldLabel="Configure error pages path"
+                                        name="./errorPages"/>
+                                </items>
+                            </column>
+                        </items>
+                    </errorPages>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
