@@ -32,7 +32,14 @@ var a = data.toString();
 		success : function(response) {
 			console.log('Success ' + response);
 
+            if (response=="Validated"){
+
+                console.log("I am here");
 			alert(""+ response);
+			window.location.href ='http://localhost:4502/content/studygeeks/us/en/LoginPage/welcomePage.html'
+            }
+
+
 
 		},
 
