@@ -12,12 +12,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.study.geeks.core.config.ReportConfig;
+import com.study.geeks.core.services.LoginDetailsExportService;
 
 @Component(immediate=true,service=Runnable.class)
 @Designate(ocd=ReportConfig.class)
 public class UserRegistrationReport implements Runnable{
 
 	@Reference Scheduler scheduler;
+	@Reference LoginDetailsExportService loginDetailsExportService;
 	
 	int schedulerID;
 	private String configparameter;
@@ -71,7 +73,7 @@ public class UserRegistrationReport implements Runnable{
 	public void run() {
 		// TODO Auto-generated method stub
 		
-		
+		loginDetailsExportService.Exportlogindetails();
 		Log.info("Void Rune is executing...");
 	}
 
