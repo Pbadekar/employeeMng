@@ -13,11 +13,14 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.study.geeks.core.config.ReportConfig;
 import com.study.geeks.core.services.GetLoginDetailsService;
 
 @Component(service = GetLoginDetailsService.class, immediate = true)
 
 public class GetLoginDetailsImpl implements GetLoginDetailsService {
+@Reference
+ReportConfig reportConfig;
 
 	@Reference
 	private ResourceResolverFactory resolverFactory;
@@ -27,6 +30,7 @@ public class GetLoginDetailsImpl implements GetLoginDetailsService {
 	public String VerifyUser(String id, String pass) {
 		String Message = "Incorrect Id or Pass1";
 		LOG.debug("id");
+		LOG.debug("1."+reportConfig.Getschedulerstatus());
 		Map<String, Object> param = new HashMap<String, Object>();
 		ResourceResolver resourceResolver = null;
 		Session session = null;
