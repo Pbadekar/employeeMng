@@ -1,4 +1,7 @@
 jquery.min.js
 bootstrap.bundle.min.js
-owl.js
+bootstrap.min.js
+isotope.js
+flex-slider.js
 custom.js
+owl.js
